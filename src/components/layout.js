@@ -4,6 +4,8 @@ import theme from '@rebass/preset';
 import Container from "./container";
 import Footer from "./footer";
 
+// theme =
+
 const Layout = ({ children }) => {
     return (
         <ThemeProvider theme={theme}>

@@ -1,6 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import Layout from "./components/layout";
+import {
+    BrowserRouter, Switch, Route, Link
+} from 'react-router-dom'
 
 const App = () => (
     <div className="App">
@@ -18,10 +21,31 @@ const App = () => (
       {/*    Learn React*/}
       {/*  </a>*/}
       {/*</header>*/}
-      <Layout>
-          <p>App goes here</p>
-      </Layout>
+      <BrowserRouter>
+          <Layout>
+              <p><Link to="/">Home</Link></p>
+              <p><Link to="/test1">Test 1</Link></p>
+              <p><Link to="/test2">Test 2</Link></p>
+              <Switch>
+                  <Route path="/test1"><Test1 /></Route>
+                  <Route path="/test2"><Test2 /></Route>
+                  <Route path="/"><Home /></Route>
+              </Switch>
+          </Layout>
+      </BrowserRouter>
     </div>
+)
+
+const Home = () => (
+    <h2>Home Page</h2>
+)
+
+const Test1 = () => (
+    <h2>Test 1</h2>
+)
+
+const Test2 = () => (
+    <h2>Test 2</h2>
 )
 
 export default App;
