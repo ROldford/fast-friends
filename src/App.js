@@ -1,6 +1,8 @@
 import './App.css';
 import React from 'react';
 import Layout from "./components/layout";
+import { Label } from '@rebass/forms';
+import { Button, Heading } from 'rebass';
 
 const App = () => (
     <div className="App">
@@ -13,18 +15,18 @@ const App = () => (
 function QuestionAnswer(props) {
   return (
     <div>
-      <label>
+      <Label>
         {props.questionAnswer.question}
-      </label>
-      <button onClick={props.onClickAnswerA}>
-        <label>{props.questionAnswer.answerA}</label>
-      </button>
-      <button onClick={props.onClickAnswerB}>
-        <label>{props.questionAnswer.answerB}</label>
-      </button>
-      <button onClick={props.onClickAnswerC}>
-        <label>{props.questionAnswer.answerC}</label>
-      </button>
+      </Label>
+      <Button variant='primary' color="" onClick={props.onClickAnswerA}>
+        <Label>{props.questionAnswer.answerA}</Label>
+      </Button>
+      <Button variant='primary' onClick={props.onClickAnswerB}>
+        <Label>{props.questionAnswer.answerB}</Label>
+      </Button>
+      <Button variant='primary' onClick={props.onClickAnswerC}>
+        <Label>{props.questionAnswer.answerC}</Label>
+      </Button>
     </div>
   )
 };
@@ -97,7 +99,16 @@ class Quiz extends React.Component {
   }
 
   render() {
-    return this.renderedComponent()
+    return (
+      <div>
+        <Heading>
+          Fast Friends
+        </Heading>
+        {
+          this.renderedComponent()
+        }
+      </div>
+    )
   };
 }
 
