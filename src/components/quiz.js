@@ -85,7 +85,7 @@ class Quiz extends React.Component {
             {
                 question: 'Should pineapple be on pizza?',
                 answerA: 'Most definitely',
-                answerB: "No, that's distguisting",
+                answerB: "No, that's disgusting",
                 answerC: "I don't eat pizza",
             },
             {
@@ -97,7 +97,7 @@ class Quiz extends React.Component {
             {
                 question: "Starbucks or Tim Hortons?",
                 answerA: "Starbucks",
-                answerB: "Time Hortons",
+                answerB: "Tim Hortons",
                 answerC: "Other",
             },
 
@@ -127,16 +127,16 @@ class Quiz extends React.Component {
             },
             {
                 question: "Loyalty is..?",
-                answerA: "a given",
-                answerB: "not required, but nice to have",
-                answerC: "never 100%",
+                answerA: "A given",
+                answerB: "Not required, but nice to have",
+                answerC: "Never 100%",
             },
 
             {
                 question: "You notice that your pants are getting tight. What do you do?",
-                answerA: "buy new pants",
-                answerB: "lose weight",
-                answerC: "suck your belly in",
+                answerA: "Buy new pants",
+                answerB: "Lose weight",
+                answerC: "Suck your belly in",
             },
             {
                 question: "Something you'd want in your fridge..?",
