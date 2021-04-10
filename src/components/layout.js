@@ -1,11 +1,16 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import theme from '@rebass/preset';
+import Container from "./container";
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
     return (
         <ThemeProvider theme={theme}>
-            {children}
+            <Container>
+                {children}
+                <Footer />
+            </Container>
         </ThemeProvider>
     )
 }
