@@ -5,6 +5,7 @@ import Layout from "./components/layout";
 import {
     BrowserRouter, Switch, Route, Link
 } from 'react-router-dom'
+import Quiz from "./components/quiz";
 
 const App = () => (
     <div className="App">
@@ -25,10 +26,10 @@ const App = () => (
       <BrowserRouter>
           <Layout>
               <p><Link to="/">Home</Link></p>
-              <p><Link to="/test1">Test 1</Link></p>
+              <p><Link to="/quiz">Quiz</Link></p>
               <p><Link to="/test2">Test 2</Link></p>
               <Switch>
-                  <Route path="/test1"><Test1 /></Route>
+                  <Route path="/quiz"><Quiz /></Route>
                   <Route path="/test2"><Test2 /></Route>
                   <Route path="/"><Home /></Route>
               </Switch>
