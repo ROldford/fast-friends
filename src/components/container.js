@@ -1,16 +1,23 @@
 import React from 'react';
-import { Box } from 'rebass';
+import { Flex, Box } from 'rebass';
 
 const Container = props => (
-    <Box
-        {...props}
-        mx="auto"
+    <Flex
+        alignItems='center'
+        justifyContent='center'
         p={2}
-        css={{
-            maxWidth: '1024px',
-            minWidth: '320px',
-        }}
-    />
+    >
+        <Box
+            {...props}
+            mx="auto"
+            p={2}
+            css={{
+                maxWidth: '1024px',
+                minWidth: '320px',
+            }}
+        />
+    </Flex>
+
 );
 
 export default Container;
