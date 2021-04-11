@@ -4,6 +4,7 @@ import { ThemeProvider } from 'emotion-theming';
 import Container from "./container";
 import Footer from "./footer";
 import Content from "./content";
+import Header from "./header";
 
 let theme = {
     breakpoints: ['40em', '52em', '64em'],
@@ -57,6 +58,7 @@ const Layout = ({ children }) => {
         <ThemeProvider theme={theme}>
             <Container>
                 <Content>
+                    <Header />
                     {children}
                     <Footer />
                 </Content>

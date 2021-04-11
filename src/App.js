@@ -6,7 +6,8 @@ import {
     BrowserRouter, Switch, Route, Link
 } from 'react-router-dom'
 import Quiz from "./components/quiz";
-import {Text} from "rebass";
+// import {Text} from "rebass";
+import Splash from "./components/splash";
 
 const App = () => (
     <div className="App">
@@ -26,31 +27,13 @@ const App = () => (
       {/*</header>*/}
       <BrowserRouter>
           <Layout>
-              <p><Link to="/">Home</Link></p>
-              <p><Link to="/quiz">Quiz</Link></p>
-              <p><Link to="/test2">Test 2</Link></p>
               <Switch>
                   <Route path="/quiz"><Quiz /></Route>
-                  <Route path="/test2"><Test2 /></Route>
-                  <Route path="/"><Home /></Route>
+                  <Route path="/"><Splash /></Route>
               </Switch>
           </Layout>
       </BrowserRouter>
     </div>
-)
-
-const Home = () => (
-    <Text fontSize={[ 3, 4, 5 ]} color='primary'>
-        Home Page
-    </Text>
-)
-
-// const Test1 = () => (
-//     <h2>Test 1</h2>
-// )
-
-const Test2 = () => (
-    <h2>Test 2</h2>
 )
 
 export default App;

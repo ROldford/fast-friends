@@ -1,5 +1,6 @@
-import {Button, Heading} from "rebass";
-import { Label } from '@rebass/forms';
+import {Button} from "rebass";
+import {Label} from '@rebass/forms';
+import {Flex} from 'rebass';
 import React from "react";
 
 function QuestionAnswer(props) {
@@ -10,17 +11,21 @@ function QuestionAnswer(props) {
                 {props.questionAnswer.question}
             </Label>
 
-            <Button variant='primary' onClick={props.onClickAnswerA}>
-                <Label>{props.questionAnswer.answerA}</Label>
-            </Button>
-            &nbsp;&nbsp;&nbsp;
-            <Button variant='primary' onClick={props.onClickAnswerB}>
-                <Label>{props.questionAnswer.answerB}</Label>
-            </Button>
-            &nbsp;&nbsp;&nbsp;
-            <Button variant='primary' onClick={props.onClickAnswerC}>
-                <Label>{props.questionAnswer.answerC}</Label>
-            </Button>
+            <Flex
+                flexDirection='column'
+            >
+                <Button variant='primary' onClick={props.onClickAnswerA}>
+                    <Label>{props.questionAnswer.answerA}</Label>
+                </Button>
+                &nbsp;&nbsp;&nbsp;
+                <Button variant='primary' onClick={props.onClickAnswerB}>
+                    <Label>{props.questionAnswer.answerB}</Label>
+                </Button>
+                &nbsp;&nbsp;&nbsp;
+                <Button variant='primary' onClick={props.onClickAnswerC}>
+                    <Label>{props.questionAnswer.answerC}</Label>
+                </Button>
+            </Flex>
         </div>
     )
 }
@@ -267,7 +272,7 @@ class Quiz extends React.Component {
     };
 
     handleClickAnswer(i, answer) {
-        switch(answer) {
+        switch (answer) {
             case 'A':
                 this.selectedAnswers.push(this.questionAnswers[i].answerA);
                 break;
@@ -302,9 +307,6 @@ class Quiz extends React.Component {
     render() {
         return (
             <div>
-                {/*<Heading>*/}
-                {/*    Fast Friends*/}
-                {/*</Heading>*/}
                 {
                     this.renderedComponent()
                 }
