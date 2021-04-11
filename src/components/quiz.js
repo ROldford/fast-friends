@@ -5,15 +5,19 @@ import React from "react";
 function QuestionAnswer(props) {
     return (
         <div>
+
             <Label>
                 {props.questionAnswer.question}
             </Label>
+
             <Button variant='primary' onClick={props.onClickAnswerA}>
                 <Label>{props.questionAnswer.answerA}</Label>
             </Button>
+            &nbsp;&nbsp;&nbsp;
             <Button variant='primary' onClick={props.onClickAnswerB}>
                 <Label>{props.questionAnswer.answerB}</Label>
             </Button>
+            &nbsp;&nbsp;&nbsp;
             <Button variant='primary' onClick={props.onClickAnswerC}>
                 <Label>{props.questionAnswer.answerC}</Label>
             </Button>

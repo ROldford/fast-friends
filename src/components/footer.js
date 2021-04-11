@@ -5,7 +5,7 @@ const Footer = () => {
     return(
         <>
             <Box fontSize={0}>
-                <footer>Footer text here</footer>
+                <footer>Finding your best match..</footer>
             </Box>
         </>
     );
