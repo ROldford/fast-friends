@@ -1,1 +1,1 @@
-# fast-friends-chatroom
+# Fast Friends - Pandemic Edition
