@@ -1,6 +1,7 @@
 import {Button, Heading} from "rebass";
 import { Label } from '@rebass/forms';
 import React from "react";
+import { Link } from "react-router-dom";
 
 function QuestionAnswer(props) {
     return (
@@ -23,12 +24,17 @@ function QuestionAnswer(props) {
 
 function DisplayResponses(props) {
     return (
-        <ul>
-            {
-                props.answers.map((item) => (<li>{item}</li>))
-            }
-        </ul>
-
+        <div>
+            <p>Your Responses!</p>
+            <ul>
+                {
+                    props.answers.map((item) => (<li>{item}</li>))
+                }
+            </ul>
+            <Link to="/chat">
+                Go to chat to some like minded people!
+            </Link>
+        </div>
     )
 }
 

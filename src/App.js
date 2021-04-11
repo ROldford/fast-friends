@@ -72,7 +72,7 @@ const App = () => {
           <Layout>
             <p><Link to="/">Home</Link></p>
             <p><Link to="/quiz">Quiz</Link></p>
-            <p><Link to="/chat">Chat</Link></p>
+            {/* <p><Link to="/chat">Chat</Link></p> */}
             <Switch>
               <Route path="/quiz"><Quiz /></Route>
               <Route path="/chat"><Channel user={user}/></Route>
