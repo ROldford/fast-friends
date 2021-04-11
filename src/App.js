@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react';
 import Layout from "./components/layout";
 import {
-    BrowserRouter, Switch, Route, Link
+    BrowserRouter, Switch, Route
 } from 'react-router-dom'
 import Quiz from "./components/quiz";
 // import {Text} from "rebass";

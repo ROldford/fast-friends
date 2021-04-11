@@ -36,9 +36,11 @@ const Splash = () => (
                         defaultValue='****'
                     />
                 </Box>
-                <Button>
-                    Log In
-                </Button>
+                <Link to='/quiz'>
+                    <Button>
+                        Log In
+                    </Button>
+                </Link>
                 {/*<Link to='/signup'>Sign Up</Link>*/}
             </Flex>
         </Box>
