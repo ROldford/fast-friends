@@ -1,6 +1,6 @@
 import {Button} from "rebass";
 import {Label} from '@rebass/forms';
-import {Flex} from 'rebass';
+import {Flex, Link} from 'rebass';
 import React from "react";
 
 function QuestionAnswer(props) {
@@ -32,12 +32,14 @@ function QuestionAnswer(props) {
 
 function DisplayResponses(props) {
     return (
-        <ul>
-            {
-                props.answers.map((item) => (<li>{item}</li>))
-            }
-        </ul>
-
+        <Flex flexDirection='column'>
+            <ul>
+                {
+                    props.answers.map((item) => (<li>{item}</li>))
+                }
+            </ul>
+            <Link href="https://nervous-wiles-8d2d8e.netlify.app/">Chat with your match!</Link>
+        </Flex>
     )
 }
 
