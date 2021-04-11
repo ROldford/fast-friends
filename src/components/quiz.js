@@ -8,7 +8,7 @@ function QuestionAnswer(props) {
             <Label>
                 {props.questionAnswer.question}
             </Label>
-            <Button variant='primary' color="" onClick={props.onClickAnswerA}>
+            <Button variant='primary' onClick={props.onClickAnswerA}>
                 <Label>{props.questionAnswer.answerA}</Label>
             </Button>
             <Button variant='primary' onClick={props.onClickAnswerB}>
@@ -91,9 +91,9 @@ class Quiz extends React.Component {
     render() {
         return (
             <div>
-                <Heading>
-                    Fast Friends
-                </Heading>
+                {/*<Heading>*/}
+                {/*    Fast Friends*/}
+                {/*</Heading>*/}
                 {
                     this.renderedComponent()
                 }

@@ -3,6 +3,7 @@ import { ThemeProvider } from 'emotion-theming';
 // import preset from "@rebass/preset";
 import Container from "./container";
 import Footer from "./footer";
+import Content from "./content";
 
 let theme = {
     breakpoints: ['40em', '52em', '64em'],
@@ -55,8 +56,10 @@ const Layout = ({ children }) => {
     return (
         <ThemeProvider theme={theme}>
             <Container>
-                {children}
-                <Footer />
+                <Content>
+                    {children}
+                    <Footer />
+                </Content>
             </Container>
         </ThemeProvider>
     )

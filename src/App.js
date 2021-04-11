@@ -6,6 +6,7 @@ import {
     BrowserRouter, Switch, Route, Link
 } from 'react-router-dom'
 import Quiz from "./components/quiz";
+import {Text} from "rebass";
 
 const App = () => (
     <div className="App">
@@ -39,12 +40,14 @@ const App = () => (
 )
 
 const Home = () => (
-    <h2>Home Page</h2>
+    <Text fontSize={[ 3, 4, 5 ]} color='primary'>
+        Home Page
+    </Text>
 )
 
-const Test1 = () => (
-    <h2>Test 1</h2>
-)
+// const Test1 = () => (
+//     <h2>Test 1</h2>
+// )
 
 const Test2 = () => (
     <h2>Test 2</h2>
